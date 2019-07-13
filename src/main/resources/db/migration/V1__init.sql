@@ -1,51 +1,23 @@
--- phpMyAdmin SQL Dump
--- version 3.2.3
--- http://www.phpmyadmin.net
---
--- Host: localhost
--- Generation Time: Sep 23, 2018 at 04:13 PM
--- Server version: 5.1.41
--- PHP Version: 5.2.12
-
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+CREATE TABLE core_t_r (
+  position_no int(11) NOT NULL AUTO_INCREMENT,
+  comm_no int(11) NOT NULL,
+  position_date datetime NOT NULL,
+  mrn varchar(20) NOT NULL,
+  mmsi varchar(20) NOT NULL,
+  s_ip varchar(20) NOT NULL,
+  gateway varchar(20) NOT NULL,
+  mac_address varchar(20) NOT NULL,
+  latitude double NOT NULL,
+  longitude double NOT NULL,
+  port_number varchar(15) NOT NULL,
+  PRIMARY KEY (position_no)
+);
 
 --
--- Database: `shore_db`
+-- Dumping data for table core_t
 --
 
--- --------------------------------------------------------
-
---
--- Table structure for table `core_t`
---
-
-CREATE TABLE IF NOT EXISTS `core_t` (
-  `postion_t_no_` int(11) NOT NULL AUTO_INCREMENT,
-  `Comm_t_no_` int(11) NOT NULL,
-  `date_` datetime NOT NULL,
-  `mrn` varchar(20) NOT NULL,
-  `mmsi` varchar(20) NOT NULL,
-  `s_ip` varchar(20) NOT NULL,
-  `gateway` varchar(20) NOT NULL,
-  `mac_address` varchar(20) NOT NULL,
-  `lat` double NOT NULL,
-  `long_` double NOT NULL,
-  `port_num` varchar(15) NOT NULL,
-  PRIMARY KEY (`postion_t_no_`),
-  KEY `postion_t_no_` (`postion_t_no_`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1003 ;
-
---
--- Dumping data for table `core_t`
---
-
-INSERT INTO core_t_r (`postion_t_no_`, `Comm_t_no_`, `date_`, `mrn`, `mmsi`, `s_ip`, `gateway`, `mac_address`, `lat`, `long_`, `port_num`) VALUES
+INSERT INTO core_t_r (position_no, comm_no, position_date, mrn, mmsi, s_ip, gateway, mac_address, latitude, longitude, port_number) VALUES
 (1, 2, '2018-08-06 12:55:15', 'urn:mrn:mcp:sc1', 'urn:mrn:mcp:sc1', '172.10.1.3', '172.10.1.1', '255.255.255.0', 88.4888746165567, 158.14709104425, '7629'),
 (2, 2, '2018-08-06 12:55:15', 'urn:mrn:mcp:sc2', 'urn:mrn:mcp:sc2', '172.10.1.4', '172.10.1.1', '255.255.255.0', 41.2428481813919, 114.36172673233, '6443'),
 (3, 3, '2018-08-06 12:55:15', 'urn:mrn:mcp:sc3', 'urn:mrn:mcp:sc3', '172.10.1.5', '172.10.1.1', '255.255.255.0', 73.2142939625441, -157.450911630365, '19329'),
@@ -349,7 +321,7 @@ INSERT INTO core_t_r (`postion_t_no_`, `Comm_t_no_`, `date_`, `mrn`, `mmsi`, `s_
 (301, 3, '2018-08-06 13:10:52', 'urn:mrn:mcp:kist91', 'urn:mrn:mcp:sc91', '172.10.10.93', '172.10.10.1', '255.255.255.0', 45.0742801335401, -12.2643204119656, '15082'),
 (302, 2, '2018-08-06 13:10:52', 'urn:mrn:mcp:kist92', 'urn:mrn:mcp:sc92', '172.10.10.94', '172.10.10.1', '255.255.255.0', -74.7220314384643, -169.84938538433, '18242'),
 (303, 0, '2018-08-06 13:10:52', 'urn:mrn:mcp:kist93', 'urn:mrn:mcp:sc93', '172.10.10.95', '172.10.10.1', '255.255.255.0', 70.6129315324248, -52.7593387409666, '10961');
-INSERT INTO core_t_r (`postion_t_no_`, `Comm_t_no_`, `date_`, `mrn`, `mmsi`, `s_ip`, `gateway`, `mac_address`, `lat`, `long_`, `port_num`) VALUES
+INSERT INTO core_t_r (position_no, comm_no, position_date, mrn, mmsi, s_ip, gateway, mac_address, latitude, longitude, port_number) VALUES
 (304, 2, '2018-08-06 13:10:52', 'urn:mrn:mcp:kist94', 'urn:mrn:mcp:sc94', '172.10.10.96', '172.10.10.1', '255.255.255.0', -71.855967872642, -19.7828677657832, '10080'),
 (305, 2, '2018-08-06 13:10:52', 'urn:mrn:mcp:kist95', 'urn:mrn:mcp:sc95', '172.10.10.97', '172.10.10.1', '255.255.255.0', 76.2202766930873, -86.040339027569, '12516'),
 (306, 1, '2018-08-06 13:10:52', 'urn:mrn:mcp:kist96', 'urn:mrn:mcp:sc96', '172.10.10.98', '172.10.10.1', '255.255.255.0', 8.8890180875445, 163.27946822185, '12340'),
@@ -648,7 +620,7 @@ INSERT INTO core_t_r (`postion_t_no_`, `Comm_t_no_`, `date_`, `mrn`, `mmsi`, `s_
 (599, 2, '2018-08-06 13:12:25', 'urn:mrn:mcp:kr189', 'urn:mrn:mcp:sc189', '172.10.15.191', '172.10.15.1', '255.255.255.0', -29.3746444791319, -27.1447737153105, '15895'),
 (600, 1, '2018-08-06 13:12:25', 'urn:mrn:mcp:kr190', 'urn:mrn:mcp:sc190', '172.10.15.192', '172.10.15.1', '255.255.255.0', -69.6794410894433, -74.921420060025, '19000'),
 (601, 2, '2018-08-06 13:12:25', 'urn:mrn:mcp:kr191', 'urn:mrn:mcp:sc191', '172.10.15.193', '172.10.15.1', '255.255.255.0', -68.5375303221285, 79.7960821509325, '12313');
-INSERT INTO core_t_r (`postion_t_no_`, `Comm_t_no_`, `date_`, `mrn`, `mmsi`, `s_ip`, `gateway`, `mac_address`, `lat`, `long_`, `port_num`) VALUES
+INSERT INTO core_t_r (position_no, comm_no, position_date, mrn, mmsi, s_ip, gateway, mac_address, latitude, longitude, port_number) VALUES
 (602, 3, '2018-08-06 13:12:25', 'urn:mrn:mcp:kr192', 'urn:mrn:mcp:sc192', '172.10.15.194', '172.10.15.1', '255.255.255.0', -46.0980562503432, -160.581558738445, '14566'),
 (603, 3, '2018-08-06 13:12:25', 'urn:mrn:mcp:kr193', 'urn:mrn:mcp:sc193', '172.10.15.195', '172.10.15.1', '255.255.255.0', 7.97475420774403, 16.7857444647567, '15889'),
 (604, 1, '2018-08-06 13:12:25', 'urn:mrn:mcp:kr194', 'urn:mrn:mcp:sc194', '172.10.15.196', '172.10.15.1', '255.255.255.0', -71.5971137346673, 135.163273329999, '15747'),
@@ -945,7 +917,7 @@ INSERT INTO core_t_r (`postion_t_no_`, `Comm_t_no_`, `date_`, `mrn`, `mmsi`, `s_
 (895, 1, '2018-08-06 13:15:47', 'urn:mrn:mcp:etri85', 'urn:mrn:mcp:sc85', '172.10.25.87', '172.10.25.1', '255.255.255.0', -8.98955636470538, -93.7294427396072, '6978'),
 (896, 2, '2018-08-06 13:15:47', 'urn:mrn:mcp:etri86', 'urn:mrn:mcp:sc86', '172.10.25.88', '172.10.25.1', '255.255.255.0', 64.2425093401619, 16.3525899158349, '5359'),
 (897, 1, '2018-08-06 13:15:47', 'urn:mrn:mcp:etri87', 'urn:mrn:mcp:sc87', '172.10.25.89', '172.10.25.1', '255.255.255.0', -60.4862651894672, -113.735707089059, '15863');
-INSERT INTO core_t_r (`postion_t_no_`, `Comm_t_no_`, `date_`, `mrn`, `mmsi`, `s_ip`, `gateway`, `mac_address`, `lat`, `long_`, `port_num`) VALUES
+INSERT INTO core_t_r (position_no, comm_no, position_date, mrn, mmsi, s_ip, gateway, mac_address, latitude, longitude, port_number) VALUES
 (898, 2, '2018-08-06 13:15:47', 'urn:mrn:mcp:etri88', 'urn:mrn:mcp:sc88', '172.10.25.90', '172.10.25.1', '255.255.255.0', -12.4215725962274, 33.8483559189814, '13236'),
 (899, 1, '2018-08-06 13:15:47', 'urn:mrn:mcp:etri89', 'urn:mrn:mcp:sc89', '172.10.25.91', '172.10.25.1', '255.255.255.0', 32.3665574419932, 37.7402261157895, '13592'),
 (900, 1, '2018-08-06 13:15:47', 'urn:mrn:mcp:etri90', 'urn:mrn:mcp:sc90', '172.10.25.92', '172.10.25.1', '255.255.255.0', 88.7587948290247, -133.570807217221, '8250'),

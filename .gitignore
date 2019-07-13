@@ -30,3 +30,9 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### checkstyle ###
+google_checks.xml
+
+### checkstyle ###
+**/hsqldb/**
